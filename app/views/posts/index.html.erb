@@ -1,0 +1,17 @@
+hello
+
+<%= link_to 'show', '/show'  %>
+
+<% @post.each do |post| %>
+  <%= post.post %>
+<% end %>
+
+
+<%= form_tag new_path, method: :post do %>
+  <%= text_field_tag 'post' %>
+  <%= submit_tag '送信' %>
+<% end %>
+
+<%= form_tag destroy_path, method: :post do %>
+  <%= submit_tag '削除' %>
+<% end %>
